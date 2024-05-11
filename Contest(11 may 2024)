@@ -1,0 +1,28 @@
+Question 1)
+3142. Check if Grid Satisfies Conditions
+https://leetcode.com/problems/check-if-grid-satisfies-conditions/
+
+//t.c- O(m*n)
+//s.c-O(1)
+
+class Solution {
+    public boolean satisfiesConditions(int[][] grid) {
+     int m = grid.length;
+        int n = grid[0].length;
+        // down(i+1)-same right(j+1)-different
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n ; j++) {
+                if(j<n-1 && grid[i][j]==grid[i][j+1]){
+                    return false;
+                }
+                if(i<m-1 && grid[i][j] != grid[i+1][j]){
+                    return false;
+                }
+            }
+        }
+        return true;
+ }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
