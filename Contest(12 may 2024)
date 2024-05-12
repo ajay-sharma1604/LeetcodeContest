@@ -27,7 +27,7 @@ https://leetcode.com/problems/taking-maximum-energy-from-the-mystic-dungeon/desc
 
 
 //t.c- O(k*n/k) =O(n)
-//s.c= O(n)
+//s.c= O(1)
 
 class Solution {
     public int maximumEnergy(int[] energy, int k) {
