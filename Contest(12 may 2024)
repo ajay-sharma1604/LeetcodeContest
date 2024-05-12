@@ -1,0 +1,21 @@
+Question 1) 
+3146. Permutation Difference between two strings
+https://leetcode.com/problems/permutation-difference-between-two-strings/
+
+ (TC): O(n + m)
+ (SC): O(n)
+
+class Solution {
+    public int findPermutationDifference(String s, String t) {
+        int absDiff=0;
+        HashMap<Character,Integer>map =new HashMap<>();
+        for(int i=0;i<s.length();i++){
+            map.put(s.charAt(i), i);
+        }
+        for(int j=0;j<t.length();j++){
+            int val =map.get(t.charAt(j));
+            absDiff += Math.abs(val-j);
+        }
+        return absDiff;
+    }
+}
